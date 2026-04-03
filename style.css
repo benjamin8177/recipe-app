@@ -1,0 +1,34 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Outfit', sans-serif;}
+
+body { background: #fef2f2; color: #1f2937; min-height: 100vh; font-size: 16px;}
+
+.container { margin: 0 auto; max-width: 900px; padding: 40px 20px;}
+
+header { text-align: center; margin-bottom: 40px;}
+h1 { font-weight: 800; font-size: 3rem; margin-bottom: 20px; color: #b91c1c;}
+
+.search-bar { display: flex; justify-content: center; max-width: 500px; margin: 0 auto; border-radius: 30px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05);}
+.search-bar input { flex-grow: 1; padding: 15px 25px; border: none; font-size: 1.1rem; outline: none; background: white;}
+.search-bar button { padding: 0 25px; background: #b91c1c; color: white; border: none; cursor: pointer; font-size: 1.2rem; transition: 0.3s;}
+.search-bar button:hover { background: #991b1b; }
+
+#result-heading { text-align: center; font-weight: 600; margin-bottom: 30px; font-size: 1.2rem;}
+
+.meals { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;}
+.meal { cursor: pointer; position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s;}
+.meal:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.15);}
+.meal img { width: 100%; height: 200px; object-fit: cover;}
+.meal-info { position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; transition: opacity 0.3s ease-in; opacity: 0; color: white; text-align: center; padding: 20px;}
+.meal:hover .meal-info { opacity: 1; }
+.meal-info h3 { font-size: 1.2rem; font-weight: 600;}
+
+#single-meal { display: flex; flex-direction: column; align-items: center; margin-top: 50px;}
+.single-meal-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); width: 100%; max-width: 600px;}
+.single-meal-card h2 { text-align: center; margin-bottom: 20px; font-size: 2rem; color: #b91c1c;}
+.single-meal-card img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 15px; margin-bottom: 20px;}
+.single-meal-info { margin-bottom: 20px; padding: 15px; border: 2px dashed #fecaca; border-radius: 10px; display: inline-block;}
+.single-meal-info p { margin-bottom: 5px; font-weight: 600;}
+.main-text { line-height: 1.6; font-size: 1.1rem; color: #4b5563;}
+.main-text h3 { margin: 20px 0 10px; color: #1f2937;}
+.ingredients { list-style: inside; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;}
+.ingredients li { font-size: 1rem;}
